@@ -1,0 +1,16 @@
+button {
+    @include no-btn;
+    padding: 0.5rem 3rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    color: var(--main__color);
+    border: 1px solid var(--main__color);
+    @include btn_anim(1.05,0.95);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+        background: var(--main__gradient);
+        color: white;
+    }
+}

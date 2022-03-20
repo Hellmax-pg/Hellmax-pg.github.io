@@ -1,7 +1,7 @@
 {
-  "name": "easy-webdev-startpack",
-  "version": "3.1.1",
-  "description": "HTML5+CSS3 template for easy start website project'",
+  "name": "r-olio",
+  "version": "1.0.0",
+  "description": "olive oil",
   "main": "gulpfile.js",
   "scripts": {
     "html": "gulp",
@@ -10,7 +10,8 @@
     "ftp": "gulp deploy",
     "build-ftp": "npm run build && npm run ftp"
   },
-  "author": "",
+  "repository": "https://github.com/Hellmax-pg/R-olio",
+  "author": "Hellmax",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.2",
