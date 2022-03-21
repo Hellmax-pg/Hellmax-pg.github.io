@@ -1,0 +1,36 @@
+.footer {
+    background-color: var(--color__salat);
+    padding: 3.25rem;
+    &__wrapper {
+        width: 100%;
+        max-width: 96rem;
+        padding: 0 1rem;
+        margin: 0 auto;
+    }
+
+    &__social{
+        list-style: none;
+    }
+    &__social-item{
+        &+&{
+            margin-left: 2rem;
+        }
+    }
+    &__social-link{
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+        @include bg('contain');
+        @include btn-anim(1.1,0.9);
+        &:focus {
+            outline: transparent;
+        }
+        &:focus-visible {
+            transform: translateY(-20%);
+        }
+    }
+    & .logo{
+        height: 7.75rem;
+        width: 7.75rem;
+    }
+}

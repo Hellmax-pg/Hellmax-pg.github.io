@@ -54,6 +54,31 @@ body {
 	font-size: 1rem;
 }
 
+.mainpage {
+	flex-direction: column;
+
+	.header,
+	.footer {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+}
+
+button {
+	@include no-btn;
+}
+
+button:focus,
+input:focus {
+	outline: transparent;
+}
+
+.main {
+	flex: 1 0 auto;
+	min-height: 200vh;
+	width: 100%;
+}
+
 ul,
 ol,
 li,
