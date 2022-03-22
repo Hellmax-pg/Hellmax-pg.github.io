@@ -1,0 +1,93 @@
+.product-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    transition: all 0.24s;
+    &__wrapper {
+        margin-bottom: 1rem;
+        position: relative;
+        height: 14.5rem;
+        width: auto;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.24s;
+            opacity: 0;
+            left: 50%;
+        }
+    }
+    
+    &__picture {
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    &__inner {
+    
+    }
+    
+    &__title {
+        color: var(--main__color);
+    }
+    
+    &__descr {
+        margin-top: 1rem;
+    }
+    
+    &__components {
+        margin-top: 1rem;
+    }
+    
+    &__components-title {
+        
+    }
+    
+    &__container {
+        margin-top: 1rem;
+    }
+    
+    &__counter {
+        min-width: 2rem;
+    }
+    
+    &__volume {
+        margin-left: auto;
+        color: var(--main__color);
+    }
+    
+    &__price {
+        margin-left: 1rem;
+        color: var(--main__color);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &:hover {
+        box-shadow: 0.75rem 0.75rem 2rem rgba(190, 191, 183, 0.1);
+        .product-card__wrapper {
+            &::before {
+                height: 15.75rem;
+                width: 15.75rem;
+                top: -2.5rem;
+                @include centerer;
+                background: var(--main__gradient);
+                opacity: 1;
+            }
+            &::after {
+                height: 17.75rem;
+                width: 17.75rem;
+                top: -3.5rem;
+                @include centerer;
+                background: var(--main__color);
+                box-shadow: 1.25px 1.25px 2px rgba(0, 0, 0, 0.1);
+                opacity: 0.2;
+            }
+            .product-card__picture {
+                transform: scale(1.25) rotate(10deg);
+                z-index: 1;
+                transition: all 0.24s;
+            }
+        }
+    }
+}

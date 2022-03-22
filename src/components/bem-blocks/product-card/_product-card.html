@@ -1,0 +1,30 @@
+<article class="product-card @@modif flex --just-space --align-center">
+    <div class="product-card__wrapper">
+        <img src="img/products/@@picture.link.png"
+             alt="@@picture.alt"
+             class="product-card__picture">
+    </div>
+    <div class="product-card__inner">
+        <h3 class="product-card__title">@@name</h3>
+        <p class="product-card__descr">@@description</p>
+        <p class="product-card__components">
+            <strong class="product-card__components-title">
+                Состав: 
+            </strong>
+            @@components
+        </p>
+        <div class="product-card__container flex --just-space --align-end">
+            <div class="product-card__counter counter">
+                <button class="counter__btn" aria-label="Удалить товар">-</button>
+                <span class="counter__text">2</span>
+                <button class="counter__btn" aria-label="Добавить товар">+</button>
+            </div>
+            <span class="product-card__volume">@@volume мл.</span>
+            <span class="product-card__price">@@price.current грн.</span>
+        </div>
+        <div class="product-card__container flex --just-space --align-center">
+            <button class="product-card__btn button" type="button">В КОРЗИНУ</button>
+            <button class="product-card__btn button" type="button">ЗАКАЗАТЬ В ТG</button>
+        </div>
+    </div>
+</article>
