@@ -7,3 +7,22 @@ window.addEventListener('scroll', function() {
         $header.classList.remove('--scroll');
     }
 });
+
+const topSlider = new Swiper('.swiper.top-slider__slider', {
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+      el: ".top-slider__slider .swiper-pagination",
+      clickable: true,
+      hashNavigation: true,
+      renderBullet: function (index, className) {
+        let productname = document.querySelectorAll('.swiper-slide')[index+1].dataset.productname
+        console.log(index, className, productname);
+        return `<span class="${className}">${productname}</span>`;
+      },
+    },
+    navigation: {
+      nextEl: '.top-slider__slider .swiper-button-next',
+      prevEl: '.top-slider__slider .swiper-button-prev',
+    },
+  });

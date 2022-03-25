@@ -1,0 +1,35 @@
+.top-slider {
+    &__title {
+
+    }
+    &__slider {
+        height: 75vh;
+        max-width: 96rem;
+        padding: 0 1rem;
+    }
+    &__header {
+        position: relative;
+        z-index: 2;
+        margin-left: auto;
+        max-width: 43rem;
+        margin-bottom: -5rem;
+    }
+    .swiper-pagination {
+        position: static;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .swiper-pagination-bullet{
+        min-width: 9rem;
+        width: auto;
+        height: auto;
+        color: var(--main__color-light);
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--main__color-light);
+        border-radius: 0;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: var(--main__color-light);
+        opacity: 1;
+    }
+}
