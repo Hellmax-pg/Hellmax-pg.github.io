@@ -1,11 +1,15 @@
 .top-slider {
+    position: relative;
+    margin-top: -3rem;
+    scroll-margin-top: 12rem;
     &__title {
-
+        color: var(--main__color);
+        transition: all 0.24s;
+        font-size: 2.25rem;
     }
     &__slider {
-        height: 75vh;
         max-width: 96rem;
-        padding: 0 1rem;
+        padding: 3rem 1rem 0;
     }
     &__header {
         position: relative;
@@ -27,9 +31,12 @@
         padding: 0.5rem 1rem;
         border: 1px solid var(--main__color-light);
         border-radius: 0;
+        background: transparent;
+        transition: all 0.24s;
+        opacity: 1;
     }
     .swiper-pagination-bullet-active {
-        background-color: var(--main__color-light);
-        opacity: 1;
+        background: var(--main__color-light);
+        color: var(--main__color-text)
     }
 }

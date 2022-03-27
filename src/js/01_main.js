@@ -9,6 +9,9 @@ window.addEventListener('scroll', function() {
 });
 
 const topSlider = new Swiper('.swiper.top-slider__slider', {
+    autoplay: {
+      delay: 3000,
+    },
     loop: true,
     slidesPerView: 1,
     pagination: {
@@ -17,7 +20,6 @@ const topSlider = new Swiper('.swiper.top-slider__slider', {
       hashNavigation: true,
       renderBullet: function (index, className) {
         let productname = document.querySelectorAll('.swiper-slide')[index+1].dataset.productname
-        console.log(index, className, productname);
         return `<span class="${className}">${productname}</span>`;
       },
     },
@@ -25,4 +27,13 @@ const topSlider = new Swiper('.swiper.top-slider__slider', {
       nextEl: '.top-slider__slider .swiper-button-next',
       prevEl: '.top-slider__slider .swiper-button-prev',
     },
+    on: {
+      slideChangeTransitionEnd: function() {
+        let modif = document.querySelector('.swiper-slide-active').dataset.modif,
+        topSliderClasses = document.querySelector('.top-slider').classList;
+        topSliderClasses.remove(topSliderClasses[1]);
+        topSliderClasses.add(modif)
+      }
+    }
   });
+

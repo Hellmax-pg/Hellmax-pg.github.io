@@ -7,7 +7,6 @@
         position: relative;
         height: 14.5rem;
         width: auto;
-
         &::before, &::after {
             content: '';
             position: absolute;
@@ -25,10 +24,6 @@
         transform: rotate(-10deg);
     }
     
-    &__inner {
-    
-    }
-    
     &__title {
         color: var(--main__color);
     }
@@ -39,10 +34,6 @@
     
     &__components {
         margin-top: 1rem;
-    }
-    
-    &__components-title {
-        
     }
     
     &__container {
