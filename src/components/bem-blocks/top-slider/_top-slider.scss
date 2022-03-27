@@ -39,4 +39,18 @@
         background: var(--main__color-light);
         color: var(--main__color-text)
     }
+    .swiper-button-prev, .swiper-button-next {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        color: var(--color__salat);
+        transition: all 0.24s;
+        &:hover {
+            background-color: rgb(255, 255, 255);
+            opacity: 0.5;
+        }
+    }
 }

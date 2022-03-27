@@ -35,5 +35,24 @@ const topSlider = new Swiper('.swiper.top-slider__slider', {
         topSliderClasses.add(modif)
       }
     }
-  });
+});
+
+const botSlider = new Swiper('.swiper.bot-slider__slider', {
+    autoplay: {
+      delay: 3000,
+    },
+    loop: true,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 32,
+    pagination: {
+      el: ".bot-slider__slider .swiper-pagination",
+      clickable: true,
+      hashNavigation: true,
+    },
+    navigation: {
+      nextEl: '.bot-slider__slider .swiper-button-next',
+      prevEl: '.bot-slider__slider .swiper-button-prev',
+    },
+});
 

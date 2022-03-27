@@ -1,0 +1,77 @@
+.contacts {
+    max-width: 96rem;
+    margin: 0 auto;
+    scroll-margin-top: 12rem;
+    &-title {
+        width: 100%;
+        text-align: center;
+    }
+    &-container {
+        position: relative;
+        width: 100%;
+        min-height: 25rem;
+        margin: 4.5rem 0;
+        padding: 0 8rem;
+    }
+    &-container__text {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+        width: 26rem;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 0;
+        p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            height: 2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                margin-left: 2rem;
+                text-decoration: none;
+                color: var(--color__salat);
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    @include btn-anim(1.1,0.9);
+                }
+                &:hover {
+                    color: var(--color__meat);
+                    transition: all 0.24s;
+                }
+            }
+        }
+        button {
+            width: 50%;
+            color: var(--color__salat);
+            border: 1px solid var(--color__salat);
+            font-weight: 500;
+            transform: scale(1.2);
+            &:hover {
+                background-color: var(--color__salat);
+            }
+        }
+    }
+    &-container__text-descr {
+    }
+    &-container__picture {
+        position: absolute;
+        left: 18rem;
+        top: -2rem;
+        // object-fit: cover;
+        z-index: -1;
+    }
+    &-container__background {
+        position: absolute;
+        min-height: 29rem;
+        min-width: 12rem;
+        left: 10rem;
+        background: var(--color__salat-light);
+        z-index: -2;
+    }
+    
+}
