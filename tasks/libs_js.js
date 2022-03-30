@@ -1,5 +1,6 @@
 const plugins = [
-	'node_modules/swiper/swiper-bundle.js'
+	'node_modules/swiper/swiper-bundle.js',
+	'node_modules/inputmask/dist/inputmask.js'
 ];
 const {
 	src,

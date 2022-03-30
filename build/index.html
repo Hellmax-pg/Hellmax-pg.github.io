@@ -78,6 +78,72 @@
         </button>
     </div>
 </header>
+	<div class="feedback__overlay">
+</div>
+<dialog class="feedback" open>
+
+    <div class="feedback__wrapper --response">
+        <button class="feedback__close --svg__close" type="button" aria-label="Закрыть диалоговое окно">
+        </button>
+    <form action="" class="feedback__form --salat" method="dialog">
+        <h2 class="feedback__form-title">
+            НАПИСАТЬ НАМ
+        </h2>
+        <label for="" class="feedback__input-wrapper">
+            <span class="feedback__input-legend">
+                Как к Вам обращатся?
+            </span>
+            <input 
+            type="text"
+            class="feedback__input-field"
+            name="feedback_form_name" 
+            id="feedback_form_name" 
+            required 
+            inputmode="text" 
+            minlength="5"
+            placeholder="Фамилия Имя">
+        </label>
+        <label for="" class="feedback__input-wrapper">
+            <span class="feedback__input-legend">
+                Контактный номер телефона
+            </span>
+            <input 
+            type="tel"
+            class="feedback__input-field"
+            name="feedback_form_tel" 
+            id="feedback_form_tel" 
+            required 
+            inputmode="tel"
+            placeholder="+380">
+        </label>
+        <textarea 
+            name="feedback__comment" 
+            id="feedback__comment" 
+            minlength="10" 
+            class="feedback__comment"
+            placeholder="Текст сообщения" 
+            required></textarea>
+        <button class="feedback__send-btn" type="submit">ОТПРАВИТЬ</button>
+    </form>
+
+    <article class="feedback__response --sended --salat">
+        <h2 class="feedback__response-title --colored">
+            СПАСИБО 
+        </h2>
+        <p class="feedback__response-text">
+            <span class="feedback__username"></span>, Ваше сообщение было доставлено. Мы перезвоним Вам в ближайшее время и ответим на все вопросы.
+        </p>
+    </article>
+    <article class="feedback__response --error --meat">
+        <h2 class="feedback__response-title --colored">
+            ВЫШЛА КАКАЯ-ТО ОШИБКА
+        </h2>
+        <p class="feedback__response-text">
+            <span class="feedback__username"></span>, Ваше сообщение не было доставлено. К сожалению, что-то пошло не так и Ваше сообщение не было доставлено. Мы очень старались его получить, но не смогли. Пожалуйста, попробуйте снова.
+        </p>
+    </article>
+</div>
+</dialog>
 	<main class="main" id="main">
 		<section class="top-slider --salat" id="slider">
 			<div class="swiper top-slider__slider">

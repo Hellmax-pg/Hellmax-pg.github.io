@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "ajax": "0.0.4",
+    "inputmask": "^5.0.7",
     "swiper": "^8.0.7"
   }
 }

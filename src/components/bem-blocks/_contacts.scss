@@ -56,13 +56,11 @@
             }
         }
     }
-    &-container__text-descr {
-    }
     &-container__picture {
         position: absolute;
         left: 18rem;
         top: -2rem;
-        // object-fit: cover;
+        object-fit: cover;
         z-index: -1;
     }
     &-container__background {
