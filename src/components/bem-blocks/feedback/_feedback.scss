@@ -15,7 +15,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 7;
+        display: none;
+        opacity: 0;
     }
+
     &__wrapper {
         position: relative;
         z-index: 1;
@@ -26,10 +29,12 @@
         padding: 3rem 3rem 4rem;
         max-width: 62rem;
         transition: all 0.24s;
+
         &.--response {
             background-position: 95% 95%;
         }
     }
+
     &__close {
         height: 2rem;
         width: 2rem;
@@ -40,53 +45,68 @@
         top: 2rem;
         background-size: contain;
         background-position: center;
-        @include btn_anim(1.1,0.9);
+        border: none;
+        &:hover {
+            cursor: pointer;
+            @include btn_anim(1.05,0.95);
+      }
     }
-    &__form {
-        // display: none;
-    }
+
+    &__form {}
+
     &__form-title {
         color: var(--main__color);
         font-size: 2.25rem;
     }
+
     &__input-wrapper {
-        display: block;        
+        display: block;
         margin-top: 1.5rem;
     }
+
     &__input-legend {
         display: block;
         width: 30.5rem;
     }
+
     &__input-field {
         margin-top: 0.25rem;
     }
+
     &__comment {
         min-height: 8rem;
         background-color: transparent;
         margin-top: 1.5rem;
+        resize: none;
+        outline: none;
     }
-    &__input-field, &__comment {
+
+    &__input-field,
+    &__comment {
         display: block;
         width: 100%;
         padding: 0.5rem 1rem;
     }
+
     &__response {
         display: none;
         opacity: 0;
     }
+
     &__response-title {
         &.--colored {
             color: var(--main__color);
         }
     }
+
     &__response-text {
         // text-align: justify;
         max-width: 21.25rem;
         margin-right: 10rem;
     }
-    &__username {
 
-    }
+    &__username {}
+
     &__send-btn {
         margin: 2rem auto 0;
         display: block;

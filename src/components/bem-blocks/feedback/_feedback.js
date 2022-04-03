@@ -1,3 +1,7 @@
+document.querySelector('.call-feedback').addEventListener('click', () => openDialog(document.querySelector('.feedback')));
+document.querySelector('.feedback__close').addEventListener('click', () => closeDialog(document.querySelector('.feedback')));
+
+
 function validation() {
     let telInputs = document.querySelectorAll('input[type="tel"]');
     if (telInputs) {

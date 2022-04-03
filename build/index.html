@@ -78,71 +78,54 @@
         </button>
     </div>
 </header>
-	<div class="feedback__overlay">
-</div>
-<dialog class="feedback" open>
+	<div class="feedback__overlay overlay"></div>
+<dialog class="feedback">
+    <div class="feedback__wrapper">
+        <div class="feedback__close --svg__close --salat">
+        </div>
+        <form action="" class="feedback__form --salat" method="dialog">
+            <h2 class="feedback__form-title">
+                НАПИСАТЬ НАМ
+            </h2>
+            <label for="" class="feedback__input-wrapper">
+                <span class="feedback__input-legend">
+                    Как к Вам обращатся?
+                </span>
+                <input type="text" class="feedback__input-field" name="feedback_form_name" id="feedback_form_name"
+                    required inputmode="text" minlength="5" placeholder="Фамилия Имя">
+            </label>
+            <label for="" class="feedback__input-wrapper">
+                <span class="feedback__input-legend">
+                    Контактный номер телефона
+                </span>
+                <input type="tel" class="feedback__input-field" name="feedback_form_tel" id="feedback_form_tel" required
+                    inputmode="tel" placeholder="+380">
+            </label>
+            <textarea name="feedback__comment" id="feedback__comment" minlength="10" class="feedback__comment"
+                placeholder="Текст сообщения" required></textarea>
+            <button class="feedback__send-btn" type="submit">ОТПРАВИТЬ</button>
+        </form>
 
-    <div class="feedback__wrapper --response">
-        <button class="feedback__close --svg__close" type="button" aria-label="Закрыть диалоговое окно">
-        </button>
-    <form action="" class="feedback__form --salat" method="dialog">
-        <h2 class="feedback__form-title">
-            НАПИСАТЬ НАМ
-        </h2>
-        <label for="" class="feedback__input-wrapper">
-            <span class="feedback__input-legend">
-                Как к Вам обращатся?
-            </span>
-            <input 
-            type="text"
-            class="feedback__input-field"
-            name="feedback_form_name" 
-            id="feedback_form_name" 
-            required 
-            inputmode="text" 
-            minlength="5"
-            placeholder="Фамилия Имя">
-        </label>
-        <label for="" class="feedback__input-wrapper">
-            <span class="feedback__input-legend">
-                Контактный номер телефона
-            </span>
-            <input 
-            type="tel"
-            class="feedback__input-field"
-            name="feedback_form_tel" 
-            id="feedback_form_tel" 
-            required 
-            inputmode="tel"
-            placeholder="+380">
-        </label>
-        <textarea 
-            name="feedback__comment" 
-            id="feedback__comment" 
-            minlength="10" 
-            class="feedback__comment"
-            placeholder="Текст сообщения" 
-            required></textarea>
-        <button class="feedback__send-btn" type="submit">ОТПРАВИТЬ</button>
-    </form>
-
-    <article class="feedback__response --sended --salat">
-        <h2 class="feedback__response-title --colored">
-            СПАСИБО 
-        </h2>
-        <p class="feedback__response-text">
-            <span class="feedback__username"></span>, Ваше сообщение было доставлено. Мы перезвоним Вам в ближайшее время и ответим на все вопросы.
-        </p>
-    </article>
-    <article class="feedback__response --error --meat">
-        <h2 class="feedback__response-title --colored">
-            ВЫШЛА КАКАЯ-ТО ОШИБКА
-        </h2>
-        <p class="feedback__response-text">
-            <span class="feedback__username"></span>, Ваше сообщение не было доставлено. К сожалению, что-то пошло не так и Ваше сообщение не было доставлено. Мы очень старались его получить, но не смогли. Пожалуйста, попробуйте снова.
-        </p>
-    </article>
-</div>
+        <article class="feedback__response --sended --salat">
+            <h2 class="feedback__response-title --colored">
+                СПАСИБО
+            </h2>
+            <p class="feedback__response-text">
+                <span class="feedback__username"></span>, Ваше сообщение было доставлено. Мы перезвоним Вам в ближайшее
+                время и ответим на все вопросы.
+            </p>
+        </article>
+        <article class="feedback__response --error --meat">
+            <h2 class="feedback__response-title --colored">
+                ВЫШЛА КАКАЯ-ТО ОШИБКА
+            </h2>
+            <p class="feedback__response-text">
+                <span class="feedback__username"></span>, Ваше сообщение не было доставлено. К сожалению, что-то пошло
+                не так и Ваше сообщение не было доставлено. Мы очень старались его получить, но не смогли. Пожалуйста,
+                попробуйте снова.
+            </p>
+        </article>
+    </div>
 </dialog>
 	<main class="main" id="main">
 		<section class="top-slider --salat" id="slider">
@@ -521,7 +504,7 @@ data-hash="east">
     <article class="delivery__part flex --align-center --just-end">
         <picture class="delivery__part-pic__one flex --align-center --just-center">
             <img src="../../img/testimonials/delivery-2.png" 
-            alt="" 
+            alt="Травы и специи" 
             class="delivery__part-img">
         </picture>
         <figure class="delivery__pic">
@@ -548,13 +531,13 @@ data-hash="east">
                 Самовывоз
             </figcaption>
         </figure>
-        <h3 class="delivery__part-title">- Доставка</h3>
+        <h3 class="delivery__part-title">-Доставка</h3>
     </article>
     <article class="delivery__part flex --align-center">
-        <h3 class="delivery__part-title">Оплата -</h3>
+        <h3 class="delivery__part-title">Оплата-</h3>
         <picture class="delivery__part-pic__two">
             <img src="../../img/testimonials/delivery-1.png" 
-            alt="" 
+            alt="Оливки" 
             class="delivery__part-img">
         </picture>
         <figure class="delivery__pic">
@@ -621,12 +604,9 @@ data-hash="east">
                 </a>
                 <a href="#">+38 (066) 11-43-558</a>
             </p>
-            <button class="button" type="button">Написать нам</button>
+            <button class="contacts__btn call-feedback" type="button">НАПИСАТЬ НАМ</button>
         </div>
-        <img 
-            class="contacts-container__picture" 
-            src="img/contacts/contacts-1.png" 
-            alt="Фото Масла на столе">
+        <img class="contacts-container__picture" src="img/contacts/contacts-1.png" alt="Фото Масла на столе">
         <div class="contacts-container__background"></div>
     </article>
 </section>
@@ -695,6 +675,79 @@ data-hash="east">
 	<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 
+	<div class="cart-modal__overlay overlay"></div>
+<dialog class="cart-modal" open>
+    <div class="cart-modal__wrapper">
+        <div class="cart-modal__close --svg__close --salat">
+        </div>
+        <form action="" class="cart-modal__form --salat" method="dialog">
+            <h2 class="cart-modal__form-title">
+                КОРЗИНА
+            </h2>
+            <div class="cart-modal__article --salat">
+                <div class="cart-modal__article-item flex --align-center --just-space">
+                    <div class="cart-modal__article-item__picture">
+                        <img src="../../../img/cart-modal/cart-modal__salat.png" alt="">
+                    </div>
+                    <div class="cart-modal__article-item__amount flex --align-center --just-center">
+                        <p class="cart-modal__article-item__amount-title">
+                            Масло "Для салата"
+                            <span class="cart-modal__article-item__amount-volume">
+                                250 мл
+                            </span>
+                        </p>
+                        <button class="counter__btn" aria-label="Удалить товар">-</button>
+                        <span class="counter__text">2</span>
+                        <button class="counter__btn" aria-label="Добавить товар">+</button>
+                    </div>
+                    <div class="cart-modal__article-item__price flex --align-center">
+                        <span class="cart-modal__article-item__price-amount">230</span>
+                        <span class="cart-modal__article-item__price-amount__currency">грн</span>
+                        <div class="cart-modal__article-item__price-close --svg__close"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal__info flex --align-center --just-space">
+                <div class="cart-modal__info-descr">
+                    <label for="" class="cart-modal__info-descr__input-wrapper">
+                        <span class="cart-modal__info-descr__input-legend">
+                            Имя получателя
+                        </span>
+                        <input type="text" class="cart-modal__info-descr__input-field" name="cart-modal_form_name" id="cart-modal_form_name"
+                            required inputmode="text" minlength="5" placeholder="Фамилия Имя">
+                    </label>
+                    <label for="" class="cart-modal__info-descr__input-wrapper">
+                        <span class="cart-modal__info-descr__input-legend">
+                            Контактный номер телефона
+                        </span>
+                        <input type="tel" class="cart-modal__info-descr__input-field" name="cart-modal_form_tel" id="cart-modal_form_tel" required
+                            inputmode="tel" placeholder="+380">
+                    </label>
+                </div>
+                <div class="cart-modal__info-payment">
+                    <p class="cart-modal__info-payment__title">Способы оплаты</p>
+                    <div class="cart-modal__info-payment__item">
+                        <input type="radio" name="payment" id="card" value="card">
+                        <label for="card">- на карту</label>
+                    </div>
+                    <div class="cart-modal__info-payment__item">
+                        <input type="radio" name="payment" id="cash" value="cash">
+                        <label for="cash">- при получении(наличными или наложенным платежом)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal__delivery">
+                <p class="cart-modal__delivery-title">
+                    Способы доставки
+                </p>
+            </div>
+
+            <!-- <textarea name="cart-modal__comment" id="cart-modal__comment" minlength="10" class="cart-modal__comment"
+                placeholder="Текст сообщения" required></textarea>
+            <button class="cart-modal__send-btn" type="submit">ОТПРАВИТЬ</button> -->
+        </form>
+    </div>
+</dialog>
 </body>
 
 </html>

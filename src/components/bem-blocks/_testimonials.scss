@@ -25,6 +25,7 @@
         border-radius: 50%;
         color: var(--color__salat);
         transition: all 0.24s;
+        outline: none;
         &:hover {
             background-color: rgb(255, 255, 255);
             opacity: 0.5;

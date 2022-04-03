@@ -36,12 +36,15 @@
                 </a>
                 <a href="#">+38 (066) 11-43-558</a>
             </p>
-            <button class="button" type="button">Написать нам</button>
+            @@include("../bem-blocks/button/_button.html", {
+            "class":{
+            "bem__elem":"contacts__btn call-feedback"
+            },
+            "type":"button",
+            "text":"НАПИСАТЬ НАМ"
+            })
         </div>
-        <img 
-            class="contacts-container__picture" 
-            src="img/contacts/contacts-1.png" 
-            alt="Фото Масла на столе">
+        <img class="contacts-container__picture" src="img/contacts/contacts-1.png" alt="Фото Масла на столе">
         <div class="contacts-container__background"></div>
     </article>
 </section>

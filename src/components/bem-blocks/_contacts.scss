@@ -34,10 +34,11 @@
                 margin-left: 2rem;
                 text-decoration: none;
                 color: var(--color__salat);
+                outline: none;
+                @include btn-anim(1.1,0.9);
                 img {
                     width: 2rem;
                     height: 2rem;
-                    @include btn-anim(1.1,0.9);
                 }
                 &:hover {
                     color: var(--color__meat);
@@ -46,11 +47,9 @@
             }
         }
         button {
-            width: 50%;
             color: var(--color__salat);
             border: 1px solid var(--color__salat);
             font-weight: 500;
-            transform: scale(1.2);
             &:hover {
                 background-color: var(--color__salat);
             }

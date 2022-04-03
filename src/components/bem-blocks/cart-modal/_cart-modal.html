@@ -1,0 +1,77 @@
+<div class="cart-modal__overlay overlay"></div>
+<dialog class="cart-modal" open>
+    <div class="cart-modal__wrapper">
+        <div class="cart-modal__close --svg__close --salat">
+        </div>
+        <form action="" class="cart-modal__form --salat" method="dialog">
+            <h2 class="cart-modal__form-title">
+                КОРЗИНА
+            </h2>
+            <div class="cart-modal__article --salat">
+                <div class="cart-modal__article-item flex --align-center --just-space">
+                    <div class="cart-modal__article-item__picture">
+                        <img src="../../../img/cart-modal/cart-modal__salat.png" alt="">
+                    </div>
+                    <div class="cart-modal__article-item__amount flex --align-center --just-center">
+                        <p class="cart-modal__article-item__amount-title">
+                            Масло "Для салата"
+                            <span class="cart-modal__article-item__amount-volume">
+                                250 мл
+                            </span>
+                        </p>
+                        <button class="counter__btn" aria-label="Удалить товар">-</button>
+                        <span class="counter__text">2</span>
+                        <button class="counter__btn" aria-label="Добавить товар">+</button>
+                    </div>
+                    <div class="cart-modal__article-item__price flex --align-center">
+                        <span class="cart-modal__article-item__price-amount">230</span>
+                        <span class="cart-modal__article-item__price-amount__currency">грн</span>
+                        <div class="cart-modal__article-item__price-close --svg__close"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal__info flex --align-center --just-space">
+                <div class="cart-modal__info-descr">
+                    <label for="" class="cart-modal__info-descr__input-wrapper">
+                        <span class="cart-modal__info-descr__input-legend">
+                            Имя получателя
+                        </span>
+                        <input type="text" class="cart-modal__info-descr__input-field" name="cart-modal_form_name" id="cart-modal_form_name"
+                            required inputmode="text" minlength="5" placeholder="Фамилия Имя">
+                    </label>
+                    <label for="" class="cart-modal__info-descr__input-wrapper">
+                        <span class="cart-modal__info-descr__input-legend">
+                            Контактный номер телефона
+                        </span>
+                        <input type="tel" class="cart-modal__info-descr__input-field" name="cart-modal_form_tel" id="cart-modal_form_tel" required
+                            inputmode="tel" placeholder="+380">
+                    </label>
+                </div>
+                <div class="cart-modal__info-payment">
+                    <p class="cart-modal__info-payment__title">Способы оплаты</p>
+                    <div class="cart-modal__info-payment__item">
+                        <input type="radio" name="payment" id="card" value="card">
+                        <label for="card">- на карту</label>
+                    </div>
+                    <div class="cart-modal__info-payment__item">
+                        <input type="radio" name="payment" id="cash" value="cash">
+                        <label for="cash">- при получении(наличными или наложенным платежом)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal__delivery">
+                <p class="cart-modal__delivery-title">
+                    Способы доставки
+                </p>
+            </div>
+
+            <!-- <textarea name="cart-modal__comment" id="cart-modal__comment" minlength="10" class="cart-modal__comment"
+                placeholder="Текст сообщения" required></textarea>
+            @@include('../button/_button.html',{
+            "class":{"bem__elem":"cart-modal__send-btn"},
+            "type":"submit",
+            "text":"ОТПРАВИТЬ"
+            }) -->
+        </form>
+    </div>
+</dialog>

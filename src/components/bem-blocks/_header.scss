@@ -26,7 +26,6 @@
 
     & .menu{
         font-family: ElMessiri;
-
         .menu__link{
             color: var(--color__salat);
             transition: all 0.75s;
@@ -39,6 +38,8 @@
     & a.header__logo {
         position: relative;
         left: 6rem;
+        outline: none;
+        @include btn-anim(1.1,0.9);
     }
     & .logo{
         height: 11rem;
@@ -77,7 +78,7 @@
         object-fit: contain;
     }
     &.--scroll {
-        z-index: 6;
+        z-index: 7;
         .header__wrapper{
             padding: 1rem;
         }
