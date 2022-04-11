@@ -3,26 +3,46 @@
     <div class="feedback__wrapper">
         <div class="feedback__close --svg__close --salat">
         </div>
-        <form action="" class="feedback__form --salat" method="dialog">
+        <form action="_telegram.php"
+              class="feedback__form --salat"
+              method="dialog"
+              id="form">
             <h2 class="feedback__form-title">
                 НАПИСАТЬ НАМ
             </h2>
-            <label for="" class="feedback__input-wrapper">
+            <label for=""
+                   class="feedback__input-wrapper">
                 <span class="feedback__input-legend">
                     Как к Вам обращатся?
                 </span>
-                <input type="text" class="feedback__input-field" name="feedback_form_name" id="feedback_form_name"
-                    required inputmode="text" minlength="5" placeholder="Фамилия Имя">
+                <input type="text"
+                       class="feedback__input-field"
+                       name="feedback_form_name"
+                       id="feedback_form_name"
+                       required
+                       inputmode="text"
+                       minlength="5"
+                       placeholder="Фамилия Имя">
             </label>
-            <label for="" class="feedback__input-wrapper">
+            <label for=""
+                   class="feedback__input-wrapper">
                 <span class="feedback__input-legend">
                     Контактный номер телефона
                 </span>
-                <input type="tel" class="feedback__input-field" name="feedback_form_tel" id="feedback_form_tel" required
-                    inputmode="tel" placeholder="+380">
+                <input type="tel"
+                       class="feedback__input-field"
+                       name="feedback_form_tel"
+                       id="feedback_form_tel"
+                       required
+                       inputmode="tel"
+                       placeholder="+380">
             </label>
-            <textarea name="feedback__comment" id="feedback__comment" minlength="10" class="feedback__comment"
-                placeholder="Текст сообщения" required></textarea>
+            <textarea name="feedback__comment"
+                      id="feedback__comment"
+                      minlength="10"
+                      class="feedback__comment"
+                      placeholder="Текст сообщения"
+                      required></textarea>
             @@include('../button/_button.html',{
             "class":{"bem__elem":"feedback__send-btn"},
             "type":"submit",

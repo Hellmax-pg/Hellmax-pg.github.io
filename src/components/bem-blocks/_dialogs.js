@@ -10,16 +10,16 @@ function noScroll() {
 
 function noScrollOff () {
     document.querySelector('body').removeAttribute('style');
-    pseudoScroll.revome();
+    pseudoScroll.remove();
 }
 
 function openDialog(dialog) {
     noScroll();
-    // if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
-    //     dialog.querySelector('.overlay').style.display = 'none';
-    //     dialog.showModal();
-    //     dialog.style.opacity = 1;
-    // }
+    if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
+        dialog.querySelector('.overlay').style.display = 'none';
+        dialog.showModal();
+        dialog.style.opacity = 1;
+    }
     
     setTimeout(() => {
         dialog.style.display = "block";

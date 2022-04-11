@@ -52,7 +52,27 @@
       }
     }
 
-    &__form {}
+    &__form {
+        // position: relative;
+    }
+
+    // &__form::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: url("../../../img/feedback/loading.gif") center / 150px no-repeat;
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     transition: all 0.5s ease 0s;
+    // }
+
+    // &__form.__sending::after {
+    //     opacity: 1;
+    //     visibility: visible;
+    // }
 
     &__form-title {
         color: var(--main__color);

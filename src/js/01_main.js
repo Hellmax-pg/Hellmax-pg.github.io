@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
 
 const topSlider = new Swiper('.swiper.top-slider__slider', {
     autoplay: {
-      delay: 3000,
+      delay: 5000,
     },
     loop: true,
     slidesPerView: 1,
@@ -39,7 +39,7 @@ const topSlider = new Swiper('.swiper.top-slider__slider', {
 
 const botSlider = new Swiper('.swiper.bot-slider__slider', {
     autoplay: {
-      delay: 3000,
+      delay: 5000,
     },
     loop: true,
     slidesPerView: 3,
