@@ -55,10 +55,11 @@
     &__buttons {
         margin-top: 2rem;
     }
-    &__btn {
-        &+& {
-            margin-left: 2.5rem;
-        }
+    &__buttons-link {
+        scroll-margin: -3.5rem;
+    }
+    &__btn-cart {
+        margin-left: 2.5rem;
     }
 }
 

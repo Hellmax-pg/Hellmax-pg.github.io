@@ -2,6 +2,7 @@
     padding: 1.5rem;
     flex-direction: column;
     transition: all 0.24s;
+    scroll-margin-top: 12rem;
     &__wrapper {
         margin-bottom: 1rem;
         position: relative;
@@ -81,5 +82,8 @@
                 transition: all 0.24s;
             }
         }
+    }
+    &:target {
+        box-shadow: 0.75rem 0.75rem 2rem rgba(190, 191, 183, 0.8);
     }
 }

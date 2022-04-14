@@ -20,13 +20,13 @@ data-hash="@@picture.link">
             'id':@@id
         })
         <div class="top-slide__buttons flex --align-center">
-            @@include('../button/_button.html', {
+            <a href="#@@modif" class="top-slide__buttons-link">@@include('../button/_button.html', {
                 "class":{"bem__elem":"top-slide__btn"},
                 "type": "button",
                 "text": "ПОДРОБНЕЕ"
-            })
+            })</a>
             @@include('../button/_button.html', {
-                "class":{"bem__elem":"top-slide__btn"},
+                "class":{"bem__elem":"top-slide__btn-cart"},
                 "type": "button",
                 "text": "В КОРЗИНУ"
             })
