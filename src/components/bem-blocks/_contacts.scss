@@ -22,6 +22,7 @@
         bottom: 0;
         background-color: #fff;
         z-index: 0;
+        box-shadow: 0.5rem 0.5rem 2rem rgba(190, 191, 183, 0.1);
         p {
             display: flex;
             align-items: center;
@@ -71,4 +72,30 @@
         z-index: -2;
     }
     
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .contacts {
+        &-container {
+            width: 100%;
+            justify-content: center;
+            margin-top: 23rem;
+        }
+        &-container__text {
+            font-size: 0.8rem;
+            padding: 3rem 0;
+        }
+        &-container__picture {
+            margin-left: 6rem;
+            left: auto;
+            width: 35rem;
+            top: -19rem;
+        }
+        &-container__background {
+            left: auto;
+            margin-right: 33rem;
+            top: -14rem;
+        }
+        
+    }
 }

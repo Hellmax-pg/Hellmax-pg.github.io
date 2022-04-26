@@ -57,3 +57,25 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .top-slider {
+        margin-top: 0;
+        scroll-margin-top: 12rem;
+        &__title {
+            text-align: center;
+        }
+        &__slider {
+            padding: 3rem 1rem 0;
+        }
+        &__header {
+            margin: 0 auto;
+        }
+        .swiper-button-prev {
+            margin-left: 3rem;
+        }
+        .swiper-button-next {
+            margin-right: 3rem;
+        }
+    }
+}

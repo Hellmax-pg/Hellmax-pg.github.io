@@ -60,3 +60,49 @@
         right: 0;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .about {
+        padding: 4rem;
+        &-container {
+            justify-content: center;
+            align-items: center;
+            margin-top: 20rem;
+        }
+        &-container__text {
+            position: static;
+            max-width: 39rem;
+            padding: 3rem;
+            &.we {
+                margin-left: 5rem;
+            }
+            &.do {
+                margin-right: 5rem;
+            }
+        }
+        &-container__picture {
+            width: 27rem;
+        }
+        &-container__background {
+            height: 9rem;
+        }
+        .picture_we {
+            top: -15rem;
+            left: auto;
+        }
+        .background_we {
+            top: -12rem;
+            left: auto;
+            margin-right: 30rem;
+        }
+        .picture_do {
+            top: -15rem;
+            right: auto;
+        }
+        .background_do {
+            top: -12rem;
+            right: auto;
+            margin-left: 30rem;
+        }
+    }
+}

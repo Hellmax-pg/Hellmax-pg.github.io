@@ -63,3 +63,53 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .top-slide {
+        display: block;
+        &__pictures {
+            flex: 0 0 0;
+            margin-top: 3rem;
+        }
+        &__picture-main {
+            position: relative;
+            object-fit: contain;
+            height: 36rem;
+            z-index: 2;
+            transform: translateY(-7%);
+        }
+        &__picture-sub {
+            position: absolute;
+            height: 16rem;
+            z-index: 1;
+            left: 50%;
+            bottom: 0;
+        }
+        &__info {
+            text-align: center;
+            flex: content;
+            margin-left: 0;
+            padding: 0 2rem;
+            flex-direction: column;
+        }
+        &__title {
+            font-size: 4rem;
+        }
+        &__descr {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+        &__counter {
+            margin-top: 2rem;
+        }
+        &__buttons {
+            justify-content: center;
+            margin: 2rem 0 5rem;
+        }
+        &__buttons-link {
+            scroll-margin: -3.5rem;
+        }
+        &__btn-cart {
+            margin-left: 2.5rem;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 .menu {
     list-style: none;
     &__item {
+        text-align: center;
         &+&{
             margin-left: 3.5rem;
         }
@@ -26,6 +27,42 @@
         }
         &:active {
             transform: scale(0.95);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .menu {
+        * {
+            font-size: 0.8rem;
+        }
+        padding: 0;
+        &__item {
+            &+&{
+                margin-left: 0;
+            }
+        }
+        &__link {
+            display: inline-block;
+            text-decoration: none;
+            padding: 1rem;
+            line-height: 1;
+            color: white;
+            transition: all 0.24s;
+            &:hover {
+                color: var(--color__meat);
+            }
+            &:focus {
+                outline: transparent;
+                transform: translateY(-10%);
+            }
+            &:focus-visible{
+                outline: transparent;
+                text-decoration: underline;
+            }
+            &:active {
+                transform: scale(0.95);
+            }
         }
     }
 }

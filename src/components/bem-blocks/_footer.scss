@@ -34,3 +34,16 @@
         width: 7.75rem;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .footer {
+        padding: 1rem 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__social{
+            margin-top: 1rem;
+            padding: 0;
+        }
+    }
+}

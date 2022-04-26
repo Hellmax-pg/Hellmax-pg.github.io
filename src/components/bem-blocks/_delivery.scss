@@ -19,13 +19,15 @@
     }
     &__part-pic__one {
         position: absolute;
-        left: 15rem;
+        left: 10rem;
         top: 4rem;
+        z-index: 1;
     }
     &__part-pic__two {
         position: absolute;
-        right: 15rem;
-        bottom: 1rem;
+        right: 10rem;
+        bottom: 3rem;
+        z-index: 1;
     }
     &__part-img {
         margin-bottom: 1.5rem;
@@ -41,5 +43,29 @@
         line-height: 6rem;
         background-color: #fff;
         padding: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .delivery {
+        &__part {
+            font-size: 0.8rem;
+            width: 80%;
+        }
+        &__part:last-child {
+            margin-top: 5rem;
+        }
+        &__part-pic__one {
+            left: 0;
+            top: 5rem;
+        }
+        &__part-pic__two {
+            right: 0;
+            bottom: 4rem;
+        }
+        &__part-img {
+            height: 80%;
+            width: 80%;
+        }
     }
 }
