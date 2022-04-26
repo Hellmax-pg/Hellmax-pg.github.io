@@ -30,10 +30,10 @@ function openDialog(dialog) {
 }
 
 function closeDialog(dialog) {
-    setTimeout(() => {
+    setTimeout(function () {
         dialog.style.opacity = 0;
     }, 100);
-    setTimeout(() => {
+    setTimeout(function () {
         if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
             dialog.close();
             dialog.querySelector('.overlay').removeAttribute("style");
