@@ -16,7 +16,6 @@ function noScrollOff () {
 function openDialog(dialog) {
     noScroll();
     if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
-        dialog.querySelector('.overlay').style.display = "none";
         dialog.showModal();
         dialog.style.opacity = 1;
     }
