@@ -15,17 +15,17 @@ function noScrollOff () {
 
 function openDialog(dialog) {
     noScroll();
-    // if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
-    //     dialog.querySelector('.overlay').style.display = "none";
-    //     dialog.showModal();
-    //     dialog.style.opacity = 1;
-    // }
+    if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
+        // dialog.querySelector('.overlay').style.display = "none";
+        dialog.showModal();
+        dialog.style.opacity = 1;
+    }
     
     setTimeout(() => {
         dialog.style.display = "block";
         dialog.style.opacity = 1;
-        document.querySelector('.overlay').style.display = "block";
-        document.querySelector('.overlay').style.opacity = 1;
+        // document.querySelector('.overlay').style.display = "block";
+        // document.querySelector('.overlay').style.opacity = 1;
     }, 100)
 }
 
@@ -36,11 +36,11 @@ function closeDialog(dialog) {
     setTimeout(() => {
         if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
             dialog.close();
-            dialog.querySelector('.overlay').removeAttribute("style");
+            // dialog.querySelector('.overlay').removeAttribute("style");
         }
         dialog.style.display = "none";
-        document.querySelector('.overlay').style.display = "none";
-        document.querySelector('.overlay').style.opacity = 0;
+        // document.querySelector('.overlay').style.display = "none";
+        // document.querySelector('.overlay').style.opacity = 0;
         noScrollOff();
     }, 200);
 }
