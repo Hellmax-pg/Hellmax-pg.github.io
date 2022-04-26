@@ -14,8 +14,6 @@ function noScrollOff () {
 }
 
 function openDialog(dialog) {
-    document.querySelector('.overlay').setAttribute("style", "display: none; opacity: 0;");
-    document.querySelector('.cart-modal').setAttribute("style", "display: none; opacity: 0;");
     noScroll();
     if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
         dialog.querySelector('.overlay').style.display = "none";
@@ -46,7 +44,3 @@ function closeDialog(dialog) {
         noScrollOff();
     }, 200);
 }
-
-
-
-// document.querySelector('.feedback"').setAttribute("style", "display: none; opacity: 0;");
