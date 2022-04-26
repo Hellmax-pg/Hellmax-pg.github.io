@@ -9,7 +9,7 @@ function noScroll() {
 }
 
 function noScrollOff () {
-    document.querySelector('body').removeAttribute('style');
+    document.querySelector('body').removeAttribute("style");
     pseudoScroll.remove();
 }
 
@@ -36,7 +36,7 @@ function closeDialog(dialog) {
     setTimeout(() => {
         if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
             dialog.close();
-            dialog.querySelector('.overlay').removeAttribute('style');
+            dialog.querySelector('.overlay').removeAttribute("style");
         }
         dialog.style.display = "none";
         document.querySelector('.overlay').style.display = "none";
