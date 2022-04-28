@@ -134,3 +134,74 @@
         display: block;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .feedback {
+        &__wrapper {
+            font-size: 0.6rem;
+            padding: 1rem;
+            max-width: 32rem;
+            min-height: 20rem;
+            background-position: 0% 100%;
+        }
+
+        &__close {
+            width: 1.5rem;
+            height: 1.5rem;
+            right: 1rem;
+            top: 1rem;
+        }
+
+        &__form-title {
+            font-size: 1.75rem;
+        }
+    
+        &__input-wrapper {
+            margin-top: 1rem;
+        }
+    
+        &__input-legend {
+            display: block;
+            width: 20rem;
+        }
+    
+        &__comment {
+            min-height: 5rem;
+        }
+    
+        &__send-btn {
+            margin: 1.5rem auto 0;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767.5px) {
+    .feedback {
+        margin: 0 auto;
+        &__wrapper {
+            font-size: 0.6rem;
+            padding: 0.5rem;
+            width: 18rem;
+            min-height: 20rem;
+        }
+
+        &__close {
+            width: 1.5rem;
+            height: 1.5rem;
+            right: 0.5rem;
+            top: 1rem;
+        }
+
+        &__form-title {
+            font-size: 1.75rem;
+        }
+    
+        &__input-wrapper {
+            margin-top: 1rem;
+        }
+    
+        &__comment {
+            min-height: 5rem;
+        }
+    }
+}

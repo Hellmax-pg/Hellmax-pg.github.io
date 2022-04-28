@@ -244,3 +244,232 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+    .cart-modal {
+        min-width: 35rem;
+        font-size: 0.7rem;
+        max-height: 25rem;
+    
+        &__wrapper {
+            padding: 2rem;
+        }
+    
+        &__close {
+            right: 2rem;
+        }
+    
+        &__form-title {
+            font-size: 2rem;
+        }
+    
+        &__article {
+            margin: 0 -2rem;
+        }
+    
+        &__article-item {
+            padding: 0.5rem 2rem;
+            min-height: 5.5rem;
+        }
+    
+        &__article-item__picture {
+            width: 8rem;
+            min-height: 5.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 8rem;
+                height: 4rem;
+            }
+        }
+    
+        &__article-item__amount {
+            width: 8rem;
+            color: var(--main__color);
+            button {
+                font-size: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                padding: 0;
+            }
+        }
+    
+        &__article-item__amount-title {
+            font-size: 0.7rem;
+        }
+
+    
+        &__article-item__price {
+            width: 8rem;
+        }
+    
+        &__article-item__price-amount {
+            font-size: 1.2rem;
+        }
+    
+        &__article-item__price-amount__currency {
+            font-size: 1rem;
+        }
+    
+        &__info-descr {
+            width: 10rem;
+        }
+    
+        &__info-payment {
+            width: 15rem;
+        }
+    
+        &__male-new {
+            min-width: 10rem;
+        }
+    
+        &__male-ukr {
+            min-width: 15rem;
+        }
+        #cart-modal__male-ukr__item-ukrindex {
+            width: 5rem;
+        }
+        #cart-modal__male-ukr__item-ukrhouse {
+            width: 5rem;
+        }
+        &__send-textarea {
+            min-width: 10rem;
+        }
+        &__send-submit {
+            min-width: 16rem;
+            button {
+                font-size: 1.2rem;
+            }
+        }
+        &__comment {
+            padding: 0.5rem 1rem;
+            width: 100%;
+            min-height: 7.5rem;
+            resize: vertical;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767.5px) {
+    .cart-modal {
+        max-width: 20rem;
+        min-width: 20rem;
+        font-size: 0.7rem;
+        max-height: 25rem;
+    
+        &__wrapper {
+            padding: 2rem;
+        }
+    
+        &__close {
+            right: 2rem;
+        }
+    
+        &__form-title {
+            font-size: 2rem;
+        }
+    
+        &__article {
+            margin: 0 -2rem;
+        }
+    
+        &__article-item {
+            flex-direction: column;
+            padding: 0.5rem 2rem;
+            min-height: 5.5rem;
+        }
+    
+        &__article-item__picture {
+            margin-top: 1rem;
+            width: 8rem;
+            min-height: 5.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 8rem;
+                height: 4rem;
+            }
+        }
+    
+        &__article-item__amount {
+            width: 8rem;
+            color: var(--main__color);
+            button {
+                font-size: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                padding: 0;
+            }
+        }
+    
+        &__article-item__amount-title {
+            font-size: 0.7rem;
+        }
+
+    
+        &__article-item__price {
+            justify-content: center;
+            margin-top: 1rem;
+            width: 8rem;
+        }
+    
+        &__article-item__price-amount {
+            font-size: 1.2rem;
+        }
+    
+        &__article-item__price-amount__currency {
+            font-size: 1rem;
+            margin-left: 0.5rem;
+        }
+        
+        &__article-item__price-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 1rem;
+        }
+
+        &__info {
+            flex-direction: column;
+        }
+
+        &__info-descr {
+            width: 100%;
+        }
+    
+        &__info-payment {
+            width: 100%;
+        }
+        
+        &__male {
+            flex-direction: column;
+        }
+        &__male-new {
+            width: 100%;
+            min-width: 15rem;
+        }
+    
+        &__male-ukr {
+            width: 100%;
+            min-width: 15rem;
+        }
+
+        &__send {
+            flex-direction: column;
+        }
+        &__send-textarea {
+            width: 100%;
+            min-width: 10rem;
+        }
+        &__send-submit {
+            min-width: 16rem;
+            button {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
