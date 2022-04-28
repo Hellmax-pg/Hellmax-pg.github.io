@@ -84,6 +84,11 @@
         &-container__text {
             font-size: 0.8rem;
             padding: 3rem 0;
+            p {
+                a {
+                    margin: 0 1rem;
+                }
+            }
         }
         &-container__picture {
             margin-left: 6rem;
