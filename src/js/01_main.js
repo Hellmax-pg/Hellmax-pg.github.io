@@ -21,6 +21,7 @@ function handleTabletChangeMobile(e) {
   }
 };
 
+
 function handleTabletChangeTablet(e) {
   if (e.matches) {
     const botSlider = new Swiper('.swiper.bot-slider__slider', {
@@ -98,9 +99,13 @@ const topSlider = new Swiper('.swiper.top-slider__slider', {
     }
 });
 
-mediaQueryTablet.addListener(handleTabletChangeTablet)
-handleTabletChangeTablet(mediaQueryTablet)
-mediaQueryDesktop.addListener(handleTabletChangeDesktop)
-handleTabletChangeDesktop(mediaQueryDesktop)
-mediaQueryMobile.addListener(handleTabletChangeMobile)
-handleTabletChangeMobile(mediaQueryMobile)
+document.querySelector('.header__menu-btn').addEventListener('click', function() {
+  item = document.querySelector('.menu');
+  if (item.classList.contains('active')) {
+    item.classList.remove("active");
+    item.classList.add("disable");
+  } else {
+    item.classList.remove("disable");
+    item.classList.add("active");
+  }
+});

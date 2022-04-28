@@ -46,6 +46,24 @@
         padding: 0 2rem;
         transition: all 0.75s;
     }
+    &__menu-btn {
+        @include no-btn;
+        @include btn-anim(1.05,0.95);
+        height: 2rem;
+        width: 2rem;
+        padding: 0;
+        margin-left: auto;
+        margin-right: 5rem;
+        margin-top: 0.5rem;
+        display: none;
+    }
+    &__menu-icon {
+        height: 100%;
+        width: 100%;
+        transition: all 0.75s;
+        fill: var(--color__salat);
+        object-fit: contain;
+    }
     &__cart-btn{
         position: relative;
         left: -3rem;
@@ -100,6 +118,9 @@
         .header__cart-icon {
             fill: white;
         }
+        .header__menu-icon{
+            fill: white;
+        }
     }
 }
 
@@ -128,6 +149,69 @@
         }
         &__cart-btn{
             left: -1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767.5px) {
+    .header {
+        z-index: 5;
+        &__round{
+            height: 7.75rem;
+            width: 7.75rem;
+            top: -2rem;
+            left: 3rem;
+        }
+        &__menu-btn {
+            display: block;
+        }
+        & a.header__logo {
+            height: 4rem;
+            left: 0;
+            top: -0.5rem;
+        }
+        & .logo{
+            height: 6rem;
+            width: 9.75rem;
+        }
+        & .menu{
+            position: absolute;
+            right: 4.2rem;
+            top: 4rem;
+            background-color: var(--color__salat);
+            z-index: 5;
+            .menu__link{
+                color: #fff;
+            }
+        }
+        &.--scroll {
+            z-index: 7;
+            .header__wrapper{
+                justify-content: space-between !important;
+                padding: 1rem;
+            }
+            .header__round{
+                top: 0;
+                left: 0;
+                margin-left: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 0px;
+            }
+            .menu__link {
+                color: white;
+            }
+            .logo {
+                margin-top: 0.5rem;
+                height: 4rem;
+                width: 10.5rem;
+            }
+        }
+        .disable {
+            display: none;
+        }
+        .active {
+            display: block;
         }
     }
 }

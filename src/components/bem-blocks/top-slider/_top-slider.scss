@@ -79,3 +79,35 @@
         }
     }
 }
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .top-slider {
+        margin-top: 0;
+        scroll-margin-top: 12rem;
+        &__title {
+            text-align: center;
+        }
+        &__slider {
+            padding: 3rem 0;
+        }
+        &__header {
+            margin: 0 auto;
+        }
+        .swiper-button-prev {
+            display: none;
+            margin-left: 3rem;
+        }
+        .swiper-button-next {
+            display: none;
+            margin-right: 3rem;
+        }
+        .swiper-pagination {
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                width: 0;
+              }
+        }
+        .swiper-pagination-bullet{
+            margin: 0 0.5rem !important;
+        }
+    }
+}

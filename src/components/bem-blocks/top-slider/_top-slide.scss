@@ -113,3 +113,41 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    .top-slide {
+        display: block;
+        &__pictures {
+            flex: 0 0 0;
+            margin-top: 3rem;
+            &::before {
+                height: 18rem;
+                width: 18rem;
+            }
+            &::after {
+                height: 16rem;
+                width: 16rem;
+            }
+        }
+        &__title {
+            font-size: 3rem;
+        }
+        &__picture-main {
+            height: 20rem;
+        }
+        &__picture-sub {
+            height: 8rem;
+        }
+        &__descr {
+            font-size: 1.2rem;
+        }
+        &__info {
+            text-align: center;
+            margin-left: 0;
+            padding: 0 1rem;
+        }
+        &__buttons {
+            justify-content: center;
+        }
+    }
+}

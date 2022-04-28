@@ -48,6 +48,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1366px) {
     .delivery {
+        scroll-margin-top: 7rem;
         &__part {
             font-size: 0.8rem;
             width: 80%;
@@ -66,6 +67,44 @@
         &__part-img {
             height: 80%;
             width: 80%;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767.5px) {
+    .delivery {
+        margin-top: 0;
+        scroll-margin-top: 0;
+        &__part {
+            justify-content: space-between;
+            display: flex;
+            font-size: 0.6rem;
+            width: 100%;
+            margin-top: 10rem;
+        }
+        &__part:last-child {
+            margin-top: 5rem;
+        }
+        &__pic {
+            padding: 0 0.5rem;
+            &-icon {
+                width: 2rem;
+            }
+        }
+        &__part-pic__one {
+            top: 6rem;
+            left: 0;
+        }
+        &__part-pic__two {
+            right: 0;
+            bottom: 15rem;
+        }
+        &__part-img {
+            height: 50%;
+            width: 50%;
+        }
+        &__pic {
+            margin: 0;
         }
     }
 }
