@@ -8,8 +8,8 @@
             <h2 class="cart-modal__form-title">
                 КОРЗИНА
             </h2>
-            <article class="cart-modal__article --salat">
-                <div class="cart-modal__article-item flex --align-center --just-space">
+            <div class="cart-modal__article --salat">
+                <article class="cart-modal__article-item flex --align-center --just-space">
                     <div class="cart-modal__article-item__picture">
                         <img src="img/cart-modal/cart-modal__salat.png"
                              alt="">
@@ -21,14 +21,22 @@
                                 250 мл
                             </span>
                         </p>
-                        <button class="counter__btn"
-                                aria-label="Удалить товар">-</button>
-                        <span class="counter__text">1</span>
-                        <button class="counter__btn"
-                                aria-label="Добавить товар">+</button>
+                        <button 
+                        name="counter__btn-modal"
+                        class="counter__btn" 
+                        data-direction="minus"
+                        aria-label="Удалить товар"
+                        data-product="@@id">-</button>
+                        <input class="counter__text" value="1"></input>
+                        <button 
+                        name="counter__btn-modal"
+                        class="counter__btn" 
+                        data-direction="plus"
+                        aria-label="Добавить товар"
+                        data-product="@@id">+</button>
                     </div>
                     <div class="cart-modal__article-item__price flex --align-center">
-                        <span class="cart-modal__article-item__price-amount">230</span>
+                        <span class="cart-modal__article-item__price-amount" data-amount="">115</span>
                         <span class="cart-modal__article-item__price-amount__currency">грн</span>
                         <div class="cart-modal__article-item__price-close --svg__close"></div>
                     </div>

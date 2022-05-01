@@ -15,15 +15,19 @@
         </p>
         <div class="product-card__container flex --just-space --align-end">
             <div class="product-card__counter counter">
-                <button class="counter__btn" aria-label="Удалить товар">-</button>
-                <span class="counter__text">1</span>
-                <button class="counter__btn" aria-label="Добавить товар">+</button>
+                <button name="counter__btn-card" class="counter__btn" 
+                data-direction="minus"
+                aria-label="Удалить товар">-</button>
+                <input class="counter__text" value="1"></input>
+                <button name="counter__btn-card" class="counter__btn"
+                data-direction="plus"
+                aria-label="Добавить товар">+</button>
             </div>
             <span class="product-card__volume">@@volume мл.</span>
-            <span class="product-card__price">@@price.current грн.</span>
+            <span class="product-card__price" data-amount="115">@@price.current грн.</span>
         </div>
         <div class="product-card__container flex --just-space --align-center">
-            <button class="product-card__btn button" type="button">В КОРЗИНУ</button>
+            <button name="product-card__btn-cart" class="product-card__btn button" type="button">В КОРЗИНУ</button>
             <button class="product-card__btn button" type="button">ЗАКАЗАТЬ В ТG</button>
         </div>
     </div>

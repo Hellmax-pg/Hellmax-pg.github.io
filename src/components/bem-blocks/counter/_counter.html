@@ -1,11 +1,15 @@
 <div class="@@bem_class counter">
     <button 
+    name="@@name"
     class="counter__btn" 
+    data-direction="minus"
     aria-label="Удалить товар"
     data-product="@@id">-</button>
-    <span class="counter__text">1</span>
+    <input class="counter__text" value="1"></input>
     <button 
+    name="@@name"
     class="counter__btn" 
+    data-direction="plus"
     aria-label="Добавить товар"
     data-product="@@id">+</button>
 </div>

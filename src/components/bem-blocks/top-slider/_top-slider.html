@@ -17,6 +17,7 @@ data-hash="@@picture.link">
         <p class="top-slide__descr">@@description</p>
         @@include('../counter/_counter.html', {
             'bem_class':"top-slide__counter",
+            'name': "counter__btn-slider",
             'id':@@id
         })
         <div class="top-slide__buttons flex --align-center">
@@ -28,7 +29,8 @@ data-hash="@@picture.link">
             @@include('../button/_button.html', {
                 "class":{"bem__elem":"top-slide__btn-cart"},
                 "type": "button",
-                "text": "В КОРЗИНУ"
+                "text": "В КОРЗИНУ",
+                "name": "product-card__btn-cart__slider"
             })
         </div>
     </div>

@@ -70,9 +70,16 @@
         padding: 0.5rem 3.5rem;
         min-height: 9.5rem;
         background-color: var(--color__cart-modal__bc);
+        &:nth-child(1) {
+            display: none;
+        }
     }
 
     &__article-item__picture {
+        border: 1px solid rgb(223, 223, 223);
+        border-radius: 1rem;
+        margin: 0.5rem 0;
+        text-align: center;
         min-width: 10rem;
         min-height: 5.5rem;
     }
@@ -86,6 +93,10 @@
         font-size: 0.8rem;
         position: absolute;
         top: 1rem;
+    }
+
+    input.counter__text {
+        background-color: var(--salat);
     }
 
     &__article-item__amount-volume {
