@@ -15,12 +15,6 @@ function noScrollOff () {
 
 function openDialog(dialog) {
     noScroll();
-    if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
-        document.querySelector('.overlay').style.display = "none";
-        dialog.showModal();
-        dialog.style.opacity = 1;
-    }
-    
     setTimeout(() => {
         dialog.style.display = "block";
         dialog.style.opacity = 1;
@@ -34,10 +28,6 @@ function closeDialog(dialog) {
         dialog.style.opacity = 0;
     }, 100);
     setTimeout(() => {
-        if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) {
-            dialog.close();
-            document.querySelector('.overlay').removeAttribute("style");
-        }
         dialog.style.display = "none";
         document.querySelector('.overlay').style.display = "none";
         document.querySelector('.overlay').style.opacity = 0;
