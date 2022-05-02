@@ -20,7 +20,7 @@ function openDialog(dialog) {
         dialog.style.opacity = 1;
         document.querySelector('.overlay').style.display = "block";
         document.querySelector('.overlay').style.opacity = 1;
-    }, 100)
+    }, 100);
 }
 
 function closeDialog(dialog) {
