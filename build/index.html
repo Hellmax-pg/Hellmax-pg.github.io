@@ -86,6 +86,279 @@
         </button>
     </div>
 </header>
+	<div class="feedback__overlay overlay" style="display: none; opacity: 0;"></div>
+<dialog class="feedback" style="display: none; opacity: 0;">
+    <div class="feedback__wrapper">
+        <div class="feedback__close --svg__close --salat">
+        </div>
+        <form action=""
+              class="feedback__form --salat"
+              method="dialog"
+              id="form">
+            <h2 class="feedback__form-title">
+                НАПИСАТЬ НАМ
+            </h2>
+            <label for=""
+                   class="feedback__input-wrapper">
+                <span class="feedback__input-legend">
+                    Как к Вам обращатся?
+                </span>
+                <input type="text"
+                       class="feedback__input-field"
+                       name="feedback_form_name"
+                       id="feedback_form_name"
+                       required
+                       inputmode="text"
+                       minlength="5"
+                       placeholder="Фамилия Имя">
+            </label>
+            <label for=""
+                   class="feedback__input-wrapper">
+                <span class="feedback__input-legend">
+                    Контактный номер телефона
+                </span>
+                <input type="tel"
+                       class="feedback__input-field"
+                       name="feedback_form_tel"
+                       id="feedback_form_tel"
+                       required
+                       inputmode="tel"
+                       placeholder="+380">
+            </label>
+            <textarea name="feedback__comment"
+                      id="feedback__comment"
+                      minlength="10"
+                      class="feedback__comment"
+                      placeholder="Текст сообщения"
+                      required></textarea>
+            <button class="feedback__send-btn" type="submit" name="@@name">ОТПРАВИТЬ</button>
+        </form>
+
+        <article class="feedback__response --sended --salat">
+            <h2 class="feedback__response-title --colored">
+                СПАСИБО
+            </h2>
+            <p class="feedback__response-text">
+                <span class="feedback__username"></span>, Ваше сообщение было доставлено. Мы перезвоним Вам в ближайшее
+                время и ответим на все вопросы.
+            </p>
+        </article>
+        <article class="feedback__response --error --meat">
+            <h2 class="feedback__response-title --colored">
+                ВЫШЛА КАКАЯ-ТО ОШИБКА
+            </h2>
+            <p class="feedback__response-text">
+                <span class="feedback__username"></span>, Ваше сообщение не было доставлено. К сожалению, что-то пошло
+                не так и Ваше сообщение не было доставлено. Мы очень старались его получить, но не смогли. Пожалуйста,
+                попробуйте снова.
+            </p>
+        </article>
+    </div>
+</dialog>
+	<dialog class="cart-modal" style="display: none; opacity: 0;">
+    <div class="cart-modal__wrapper">
+        <div class="cart-modal__close --svg__close --salat">
+        </div>
+        <form action=""
+              class="cart-modal__form --salat"
+              method="dialog">
+            <h2 class="cart-modal__form-title">
+                КОРЗИНА
+            </h2>
+            <div class="cart-modal__article --salat">
+                <article class="cart-modal__article-item flex --align-center --just-space">
+                    <div class="cart-modal__article-item__picture">
+                        <img src="img/cart-modal/cart-modal__salat.png"
+                             alt="">
+                    </div>
+                    <div class="cart-modal__article-item__amount flex --align-center --just-center">
+                        <p class="cart-modal__article-item__amount-title">
+                            Масло "Для салата"
+                            <span class="cart-modal__article-item__amount-volume">
+                                250 мл
+                            </span>
+                        </p>
+                        <button 
+                        name="counter__btn-modal"
+                        class="counter__btn" 
+                        data-direction="minus"
+                        aria-label="Удалить товар"
+                        data-product="@@id">-</button>
+                        <input class="counter__text" value="1"></input>
+                        <button 
+                        name="counter__btn-modal"
+                        class="counter__btn" 
+                        data-direction="plus"
+                        aria-label="Добавить товар"
+                        data-product="@@id">+</button>
+                    </div>
+                    <div class="cart-modal__article-item__price flex --align-center">
+                        <span class="cart-modal__article-item__price-amount" data-amount="">115</span>
+                        <span class="cart-modal__article-item__price-amount__currency">грн</span>
+                        <div class="cart-modal__article-item__price-close --svg__close"></div>
+                    </div>
+                </div>
+            </article>
+            <div class="cart-modal__info flex --align-center --just-space">
+                <div class="cart-modal__info-descr">
+                    <label for=""
+                           class="cart-modal__info-descr__input-wrapper">
+                        <span class="cart-modal__info-descr__input-legend">
+                            Имя получателя
+                        </span>
+                        <input type="text"
+                               class="cart-modal__info-descr__input-field"
+                               name="cart-modal_form_name"
+                               id="cart-modal_form_name"
+                               required
+                               inputmode="text"
+                               minlength="5"
+                               placeholder="Фамилия Имя">
+                    </label>
+                    <label for=""
+                           class="cart-modal__info-descr__input-wrapper">
+                        <span class="cart-modal__info-descr__input-legend">
+                            Контактный номер телефона
+                        </span>
+                        <input type="tel"
+                               class="cart-modal__info-descr__input-field"
+                               name="cart-modal_form_tel"
+                               id="cart-modal_form_tel"
+                               required
+                               inputmode="tel"
+                               placeholder="+380">
+                    </label>
+                </div>
+                <div class="cart-modal__info-payment">
+                    <p class="cart-modal__info-payment__title">Способы оплаты:</p>
+                    <div class="cart-modal__info-payment__item">
+                        <input type="radio"
+                               name="payment"
+                               id="card"
+                               value="card">
+                        <label for="card">- на карту</label>
+                    </div>
+                    <div class="cart-modal__info-payment__item">
+                        <input type="radio"
+                               name="payment"
+                               id="cash"
+                               value="cash">
+                        <label for="cash">- при получении(наличными или наложенным платежом)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal__delivery">
+                <p class="cart-modal__delivery-title">
+                    Способы доставки:
+                </p>
+                <div class="cart-modal__delivery__item">
+                    <input type="radio"
+                           name="delivery"
+                           id="newmale"
+                           value="newmale">
+                    <label for="newmale">- Новая почта</label>
+                </div>
+                <div class="cart-modal__delivery__item">
+                    <input type="radio"
+                           name="delivery"
+                           id="ukrmale"
+                           value="ukrmale">
+                    <label for="ukrmale">- Укрпочта</label>
+                </div>
+                <div class="cart-modal__delivery__item">
+                    <input type="radio"
+                           name="delivery"
+                           id="pickup"
+                           value="pickup">
+                    <label for="pickup">- Самовывоз</label>
+                </div>
+            </div>
+            <div class="cart-modal__male flex --just-space">
+                <div class="cart-modal__male-new flex">
+                    <p class="cart-modal__male-new__title">
+                        Новая почта:
+                    </p>
+                    <input type="text"
+                           class="cart-modal__male-new__item-field"
+                           name="cart-modal__male-new__item-newcity"
+                           id="cart-modal__male-new__item-newcity"
+                           inputmode="text"
+                           minlength="2"
+                           placeholder="Город">
+                    <input type="text"
+                           class="cart-modal__male-new__item-field"
+                           name="cart-modal__male-new__item-newdepartment"
+                           id="cart-modal__male-new__item-newdepartment"
+                           inputmode="text"
+                           minlength="1"
+                           placeholder="Отделение №">
+                </div>
+                <div class="cart-modal__male-ukr flex --just-space">
+                    <p class="cart-modal__male-ukr__title">
+                        Укрпочта:
+                    </p>
+                    <div class="cart-modal__male-ukr__field">
+                        <input type="text"
+                               class="cart-modal__male-ukr__item"
+                               name="cart-modal__male-ukr__item-ukrindex"
+                               id="cart-modal__male-ukr__item-ukrindex"
+                               inputmode="text"
+                               minlength="2"
+                               placeholder="49000">
+                        <input type="text"
+                               class="cart-modal__male-ukr__item"
+                               name="cart-modal__male-ukr__item-ukrdepartment"
+                               id="cart-modal__male-ukr__item-ukrdepartment"
+                               inputmode="text"
+                               minlength="1"
+                               placeholder="Город">
+                    </div>
+                    <div class="cart-modal__male-ukr__field">
+                        <input type="text"
+                               class="cart-modal__male-ukr__item"
+                               name="cart-modal__male-ukr__item-ukrstreet"
+                               id="cart-modal__male-ukr__item-ukrstreet"
+                               inputmode="text"
+                               minlength="2"
+                               placeholder="Улица">
+                        <input type="text"
+                               class="cart-modal__male-ukr__item"
+                               name="cart-modal__male-ukr__item-ukrhouse"
+                               id="cart-modal__male-ukr__item-ukrhouse"
+                               inputmode="text"
+                               minlength="1"
+                               placeholder="Дом">
+                    </div>
+                    <div class="cart-modal__male-ukr__field">
+                        <input type="text"
+                               class="cart-modal__male-ukr__item"
+                               name="cart-modal__male-ukr__item-addit"
+                               id="cart-modal__male-ukr__item-addit"
+                               inputmode="text"
+                               minlength="1"
+                               placeholder="Дополнительно (подъезд, квартира и т.д.)">
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal__send flex --just-space">
+                <div class="cart-modal__send-textarea">
+                    <textarea name="cart-modal__comment"
+                              id="cart-modal__comment"
+                              minlength="10"
+                              class="cart-modal__comment"
+                              placeholder="Текст сообщения"></textarea>
+                </div>
+                <div class="cart-modal__send-submit flex">
+                    <button class="cart-modal__send-submit__but" type="submit" name="@@name">ОТПРАВИТЬ ЗАКАЗ</button>
+                    <button class="cart-modal__send-reset" type="reset" name="@@name">СБРОСИТЬ</button>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</dialog>
 	<main class="main" id="main">
 		<section class="top-slider --salat" id="slider">
 			<div class="swiper top-slider__slider">
@@ -666,279 +939,6 @@ data-hash="east">
 	<script src="js/libs.min.js"></script>
 <script async src="js/main.min.js"></script>
 
-	<div class="feedback__overlay overlay" style="display: none; opacity: 0;"></div>
-<dialog class="feedback" style="display: none; opacity: 0;">
-    <div class="feedback__wrapper">
-        <div class="feedback__close --svg__close --salat">
-        </div>
-        <form action=""
-              class="feedback__form --salat"
-              method="dialog"
-              id="form">
-            <h2 class="feedback__form-title">
-                НАПИСАТЬ НАМ
-            </h2>
-            <label for=""
-                   class="feedback__input-wrapper">
-                <span class="feedback__input-legend">
-                    Как к Вам обращатся?
-                </span>
-                <input type="text"
-                       class="feedback__input-field"
-                       name="feedback_form_name"
-                       id="feedback_form_name"
-                       required
-                       inputmode="text"
-                       minlength="5"
-                       placeholder="Фамилия Имя">
-            </label>
-            <label for=""
-                   class="feedback__input-wrapper">
-                <span class="feedback__input-legend">
-                    Контактный номер телефона
-                </span>
-                <input type="tel"
-                       class="feedback__input-field"
-                       name="feedback_form_tel"
-                       id="feedback_form_tel"
-                       required
-                       inputmode="tel"
-                       placeholder="+380">
-            </label>
-            <textarea name="feedback__comment"
-                      id="feedback__comment"
-                      minlength="10"
-                      class="feedback__comment"
-                      placeholder="Текст сообщения"
-                      required></textarea>
-            <button class="feedback__send-btn" type="submit" name="@@name">ОТПРАВИТЬ</button>
-        </form>
-
-        <article class="feedback__response --sended --salat">
-            <h2 class="feedback__response-title --colored">
-                СПАСИБО
-            </h2>
-            <p class="feedback__response-text">
-                <span class="feedback__username"></span>, Ваше сообщение было доставлено. Мы перезвоним Вам в ближайшее
-                время и ответим на все вопросы.
-            </p>
-        </article>
-        <article class="feedback__response --error --meat">
-            <h2 class="feedback__response-title --colored">
-                ВЫШЛА КАКАЯ-ТО ОШИБКА
-            </h2>
-            <p class="feedback__response-text">
-                <span class="feedback__username"></span>, Ваше сообщение не было доставлено. К сожалению, что-то пошло
-                не так и Ваше сообщение не было доставлено. Мы очень старались его получить, но не смогли. Пожалуйста,
-                попробуйте снова.
-            </p>
-        </article>
-    </div>
-</dialog>
-	<dialog class="cart-modal" style="display: none; opacity: 0;">
-    <div class="cart-modal__wrapper">
-        <div class="cart-modal__close --svg__close --salat">
-        </div>
-        <form action=""
-              class="cart-modal__form --salat"
-              method="dialog">
-            <h2 class="cart-modal__form-title">
-                КОРЗИНА
-            </h2>
-            <div class="cart-modal__article --salat">
-                <article class="cart-modal__article-item flex --align-center --just-space">
-                    <div class="cart-modal__article-item__picture">
-                        <img src="img/cart-modal/cart-modal__salat.png"
-                             alt="">
-                    </div>
-                    <div class="cart-modal__article-item__amount flex --align-center --just-center">
-                        <p class="cart-modal__article-item__amount-title">
-                            Масло "Для салата"
-                            <span class="cart-modal__article-item__amount-volume">
-                                250 мл
-                            </span>
-                        </p>
-                        <button 
-                        name="counter__btn-modal"
-                        class="counter__btn" 
-                        data-direction="minus"
-                        aria-label="Удалить товар"
-                        data-product="@@id">-</button>
-                        <input class="counter__text" value="1"></input>
-                        <button 
-                        name="counter__btn-modal"
-                        class="counter__btn" 
-                        data-direction="plus"
-                        aria-label="Добавить товар"
-                        data-product="@@id">+</button>
-                    </div>
-                    <div class="cart-modal__article-item__price flex --align-center">
-                        <span class="cart-modal__article-item__price-amount" data-amount="">115</span>
-                        <span class="cart-modal__article-item__price-amount__currency">грн</span>
-                        <div class="cart-modal__article-item__price-close --svg__close"></div>
-                    </div>
-                </div>
-            </article>
-            <div class="cart-modal__info flex --align-center --just-space">
-                <div class="cart-modal__info-descr">
-                    <label for=""
-                           class="cart-modal__info-descr__input-wrapper">
-                        <span class="cart-modal__info-descr__input-legend">
-                            Имя получателя
-                        </span>
-                        <input type="text"
-                               class="cart-modal__info-descr__input-field"
-                               name="cart-modal_form_name"
-                               id="cart-modal_form_name"
-                               required
-                               inputmode="text"
-                               minlength="5"
-                               placeholder="Фамилия Имя">
-                    </label>
-                    <label for=""
-                           class="cart-modal__info-descr__input-wrapper">
-                        <span class="cart-modal__info-descr__input-legend">
-                            Контактный номер телефона
-                        </span>
-                        <input type="tel"
-                               class="cart-modal__info-descr__input-field"
-                               name="cart-modal_form_tel"
-                               id="cart-modal_form_tel"
-                               required
-                               inputmode="tel"
-                               placeholder="+380">
-                    </label>
-                </div>
-                <div class="cart-modal__info-payment">
-                    <p class="cart-modal__info-payment__title">Способы оплаты:</p>
-                    <div class="cart-modal__info-payment__item">
-                        <input type="radio"
-                               name="payment"
-                               id="card"
-                               value="card">
-                        <label for="card">- на карту</label>
-                    </div>
-                    <div class="cart-modal__info-payment__item">
-                        <input type="radio"
-                               name="payment"
-                               id="cash"
-                               value="cash">
-                        <label for="cash">- при получении(наличными или наложенным платежом)</label>
-                    </div>
-                </div>
-            </div>
-            <div class="cart-modal__delivery">
-                <p class="cart-modal__delivery-title">
-                    Способы доставки:
-                </p>
-                <div class="cart-modal__delivery__item">
-                    <input type="radio"
-                           name="delivery"
-                           id="newmale"
-                           value="newmale">
-                    <label for="newmale">- Новая почта</label>
-                </div>
-                <div class="cart-modal__delivery__item">
-                    <input type="radio"
-                           name="delivery"
-                           id="ukrmale"
-                           value="ukrmale">
-                    <label for="ukrmale">- Укрпочта</label>
-                </div>
-                <div class="cart-modal__delivery__item">
-                    <input type="radio"
-                           name="delivery"
-                           id="pickup"
-                           value="pickup">
-                    <label for="pickup">- Самовывоз</label>
-                </div>
-            </div>
-            <div class="cart-modal__male flex --just-space">
-                <div class="cart-modal__male-new flex">
-                    <p class="cart-modal__male-new__title">
-                        Новая почта:
-                    </p>
-                    <input type="text"
-                           class="cart-modal__male-new__item-field"
-                           name="cart-modal__male-new__item-newcity"
-                           id="cart-modal__male-new__item-newcity"
-                           inputmode="text"
-                           minlength="2"
-                           placeholder="Город">
-                    <input type="text"
-                           class="cart-modal__male-new__item-field"
-                           name="cart-modal__male-new__item-newdepartment"
-                           id="cart-modal__male-new__item-newdepartment"
-                           inputmode="text"
-                           minlength="1"
-                           placeholder="Отделение №">
-                </div>
-                <div class="cart-modal__male-ukr flex --just-space">
-                    <p class="cart-modal__male-ukr__title">
-                        Укрпочта:
-                    </p>
-                    <div class="cart-modal__male-ukr__field">
-                        <input type="text"
-                               class="cart-modal__male-ukr__item"
-                               name="cart-modal__male-ukr__item-ukrindex"
-                               id="cart-modal__male-ukr__item-ukrindex"
-                               inputmode="text"
-                               minlength="2"
-                               placeholder="49000">
-                        <input type="text"
-                               class="cart-modal__male-ukr__item"
-                               name="cart-modal__male-ukr__item-ukrdepartment"
-                               id="cart-modal__male-ukr__item-ukrdepartment"
-                               inputmode="text"
-                               minlength="1"
-                               placeholder="Город">
-                    </div>
-                    <div class="cart-modal__male-ukr__field">
-                        <input type="text"
-                               class="cart-modal__male-ukr__item"
-                               name="cart-modal__male-ukr__item-ukrstreet"
-                               id="cart-modal__male-ukr__item-ukrstreet"
-                               inputmode="text"
-                               minlength="2"
-                               placeholder="Улица">
-                        <input type="text"
-                               class="cart-modal__male-ukr__item"
-                               name="cart-modal__male-ukr__item-ukrhouse"
-                               id="cart-modal__male-ukr__item-ukrhouse"
-                               inputmode="text"
-                               minlength="1"
-                               placeholder="Дом">
-                    </div>
-                    <div class="cart-modal__male-ukr__field">
-                        <input type="text"
-                               class="cart-modal__male-ukr__item"
-                               name="cart-modal__male-ukr__item-addit"
-                               id="cart-modal__male-ukr__item-addit"
-                               inputmode="text"
-                               minlength="1"
-                               placeholder="Дополнительно (подъезд, квартира и т.д.)">
-                    </div>
-                </div>
-            </div>
-            <div class="cart-modal__send flex --just-space">
-                <div class="cart-modal__send-textarea">
-                    <textarea name="cart-modal__comment"
-                              id="cart-modal__comment"
-                              minlength="10"
-                              class="cart-modal__comment"
-                              placeholder="Текст сообщения"></textarea>
-                </div>
-                <div class="cart-modal__send-submit flex">
-                    <button class="cart-modal__send-submit__but" type="submit" name="@@name">ОТПРАВИТЬ ЗАКАЗ</button>
-                    <button class="cart-modal__send-reset" type="reset" name="@@name">СБРОСИТЬ</button>
-                </div>
-            </div>
-
-
-
-        </form>
-    </div>
-</dialog>
 </body>
 
 </html>
